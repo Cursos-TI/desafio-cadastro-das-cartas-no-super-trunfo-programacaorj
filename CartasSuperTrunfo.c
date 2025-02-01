@@ -13,7 +13,7 @@ int main() {
     char codigo[6]; 
     char nome[50];
     int populacao;
-    float area, pib; 
+    double area, pib; 
     int pontos_turisticos; 
 
     // Cadastro das Cartas:
@@ -27,13 +27,16 @@ int main() {
     scanf("%s", nome);
 
     printf("Digite a população da cidade: \n");
-    scanf("%d", &populacao);
+    scanf(" %d", &populacao);
+    getchar(); //limpa o buffer
 
     printf("Digite a area da cidade: \n"); 
-    scanf(" %.2f", &area);
+    scanf(" %lf", &area);
+    getchar();//limpa o buffer
 
     printf("Digite o pib da cidade: \n");
-    scanf(" %.2f", &pib);
+    scanf(" %lf", &pib);
+    getchar(); //limpa o buffer 
 
     printf("Quantidade de pontos turisticos: \n"); 
     scanf("%d", &pontos_turisticos);
@@ -45,8 +48,8 @@ int main() {
     printf("Código da carta: %s \n", codigo);
     printf("Nome da cidade: %s \n", nome);
     printf("População: %d \n", populacao);
-    printf("Área: %f Km² \n", area);
-    printf("PIB: %f \n", pib);
+    printf("Área: %1f Km² \n", area);
+    printf("PIB: %1f \n", pib);
     printf("Pontos turísticos: %d \n", pontos_turisticos);
     printf("CARTA CADASTRADA!");
 
